@@ -20,6 +20,7 @@ classes = {
   "users": User
 }
 
+
 @app_views.route("/status", strict_slashes=False)
 def status_route():
     """show json object with status OK"""
