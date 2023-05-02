@@ -19,6 +19,7 @@ def teardown_db(e):
 
 @app.errorhandler(404)
 def page_not_found(error):
+    """page not found middleware for handling error pages"""
     return jsonify({
         "error": "Not found"
     })
