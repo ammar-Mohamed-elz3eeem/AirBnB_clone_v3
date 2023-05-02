@@ -55,7 +55,7 @@ class DBStorage:
         """get single object from files that have specifiec id"""
         if cls not in classes.values() or cls is None:
             return None
-        obj = self.__session.query(classes[cls]).get(id)
+        obj = self.__session.query(cls).get(id)
         return obj
 
     def count(self, cls=None):
