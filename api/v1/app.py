@@ -17,6 +17,13 @@ def teardown_db(e):
         storage.close()
 
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return jsonify({
+        "error": "Not found"
+    })
+
+
 if __name__ == "__main__":
     app.run(
         threaded=True,
