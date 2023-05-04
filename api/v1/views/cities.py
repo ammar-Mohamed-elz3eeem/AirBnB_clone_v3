@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """city routes for reading, updating, creating, deleteing cities
 from our storage engine"""
-from flask import jsonify, abort, request, Response
 from api.v1.app import app_views
-from models import storage
-from models.city import City
 from models.state import State
+from models.city import City
+from models import storage
+from flask import jsonify, abort, request, Response
 
 
 @app_views.route("/states/<string:state_id>/cities", strict_slashes=False)
