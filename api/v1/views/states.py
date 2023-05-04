@@ -29,14 +29,15 @@ def get_state(state_id):
 def add_state():
     """add new state route"""
     obj = request.get_json()
+    print(obj)
     if not isinstance(obj, dict):
         return abort(Response("Not a JSON", 400))
     if obj.get("name") is None:
         return abort(Response("Missing name", 400))
-    state = State(obj)
+    state = State(**obj)
     storage.new(state)
     storage.save()
-    return jsonify(state.to_dict())
+    return jsonify(state.to_dict()), 201
 
 
 @app_views.route("/states/<string:state_id>", methods=["DELETE"])
