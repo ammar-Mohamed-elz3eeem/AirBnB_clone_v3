@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This is all routes related to city object"""
+"""city routes for reading, updating, creating, deleteing cities
+from our storage engine"""
 from flask import jsonify, abort, request, Response
 from api.v1.app import app_views
 from models import storage
