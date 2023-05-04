@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """This is all routes related to city object"""
 from flask import jsonify, abort, request, Response
 from api.v1.app import app_views
