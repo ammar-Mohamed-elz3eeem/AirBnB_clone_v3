@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""city routes for reading, updating, creating, deleteing cities
-from our storage engine"""
+"""cities"""
+
 from api.v1.app import app_views
 from models.state import State
 from models.city import City
