@@ -2,7 +2,7 @@
 """Flask api for AirBnB"""
 from flask import Flask
 from models import storage
-from api.v1.views import *
+from api.v1.views import app_views
 from os import getenv
 
 
