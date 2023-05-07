@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""cities"""
+""" cities """
 
 from api.v1.app import app_views
 from models.state import State
@@ -50,7 +50,8 @@ def create_city(state_id):
         return abort(Response("Not a JSON0", 400))
     if data.get("name") is None:
         return abort(Response("Missing name", 400))
-    city = City(**data, state_id=state_id)
+    city = City(**data)
+    city.state_id = state_id
     storage.new(state)
     return jsonify(city.to_dict()), 201
 
