@@ -3,13 +3,7 @@
 from flask import Blueprint
 
 
-app_views = Blueprint(
-    name="app_views",
-    import_name=__name__,
-    url_prefix="/api/v1",
-    template_folder="templates",
-    static_folder="static"
-)
+app_views = Blueprint("app_views", __name__, url_prefix="/api/v1")
 
 
 if app_views is not None:

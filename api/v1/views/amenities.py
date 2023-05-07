@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""amenties routes for reading, updating, creating, deleteing amenties
-from our storage engine"""
+""" amenties routes for reading, updating, creating, deleteing amenties """
 from api.v1.app import app_views
 from models.amenity import Amenity
 from models import storage
