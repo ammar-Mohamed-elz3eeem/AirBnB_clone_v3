@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Flask api for AirBnB"""
-from flask import Flask, jsonify
 from models import storage
 from api.v1.views import app_views
 from os import getenv
+from flask import Flask, jsonify
 
 
 app = Flask(__name__)

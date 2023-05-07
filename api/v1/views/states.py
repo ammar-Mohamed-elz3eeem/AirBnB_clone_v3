@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """state routes for reading, updating, creating, deleteing states
 from our storage engine"""
-from api.v1.app import app_views
 from models.state import State
 from models import storage
+from api.v1.app import app_views
 from flask import jsonify, request, abort, Response
 import json
 
