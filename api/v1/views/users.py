@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-""" All User routes
-    GET /users: get all users registered into our storage engine
-    POST /users: add new user to our storage
-    PUT /users/<user_id>: edit user info using its id
-    DELETE /users/<user_id>: delete user using its id
-    GET /users/<user_id>: get user using his id
-"""
+""" objects that handle all default RestFul API actions for Users """
 from api.v1.app import app_views
 from flask import jsonify, abort, request
 from models import storage
